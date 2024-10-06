@@ -1,4 +1,4 @@
-/media/amnesia/SSDs/clion-2023.2.1/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_MAKE_PROGRAM=/media/amnesia/SSDs/clion-2023.2.1/bin/ninja/linux/x64/ninja -DCMAKE_C_COMPILER=/bin/gcc -DCMAKE_CXX_COMPILER=/bin/g++ -G Ninja -S /home/amnesia/CLionProjects/control1-1 -B /home/amnesia/CLionProjects/control1-1/cmake-build-debug
--- Configuring done (0.0s)
+/media/amnesia/SSDs/clion-2023.2.1/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_C_COMPILER=/bin/gcc -DCMAKE_CXX_COMPILER=/bin/g++ -G "CodeBlocks - Unix Makefiles" -S /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo -B /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/cmake-build-debug
+-- Configuring done (0.1s)
 -- Generating done (0.0s)
--- Build files have been written to: /home/amnesia/CLionProjects/control1-1/cmake-build-debug
+-- Build files have been written to: /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/cmake-build-debug

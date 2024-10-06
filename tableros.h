@@ -1,39 +1,12 @@
 #ifndef CONTROL1_1_TABLEROS_H
 #define CONTROL1_1_TABLEROS_H
 
-#include <fstream>
-#include <string>
 #include "fichas.h"
-#include <sstream>
-#include <vector>
 
 class MPP {
 private:
     int filas, cols;
-    Node* cabeza;
-    int tipoDeClase(string tipo) {
-        //valor 0 indica casilla bloqueada
-        if ("Espadachin" == tipo) {
-            return 1;
-        } else if  ("Mago" == tipo) {
-            return 2;
-        } else if ("Tanque" == tipo) {
-            return 3;
-        } else if ("Arquero" == tipo) {
-            return 4;
-        }
-        return -1;
-    }
-
-    vector<string> cortarCadena(const string& cadena, char coma) {
-        vector<string> resultado;
-        stringstream ss(cadena);  
-        string aux;
-        while (getline(ss, aux, coma)) {
-            resultado.push_back(aux);  
-        }
-        return resultado;
-    }
+    Nodo* cabeza;
 
 public:
     MPP() {
@@ -45,7 +18,7 @@ public:
     void insertar(int f, int c, int val) {
         if (val == 0 || val > 4) return;
 
-        Node* NuevoNodo = new Node();
+        Nodo* NuevoNodo = new Nodo();
         NuevoNodo->fila = f;
         NuevoNodo->col = c;
         NuevoNodo->valor = val;
@@ -54,7 +27,7 @@ public:
         if (cabeza == nullptr) {
             cabeza = NuevoNodo;
         } else {
-            Node* aux = cabeza;
+            Nodo* aux = cabeza;
             while (aux->siguiente != nullptr) {
                 aux = aux->siguiente;
             }
@@ -63,7 +36,7 @@ public:
     }
 
     void desplegar() {
-        Node* aux = cabeza;
+        Nodo* aux = cabeza;
         cout << "Nodos en la MPP:" << endl;
         while (aux != nullptr) {
             cout << "(" << aux->fila << ", " << aux->col << ", " << aux->valor << ")" << endl;
@@ -93,7 +66,7 @@ public:
         file.close();
     }
     int getValue(int f, int c) {
-        Node* aux = cabeza;
+        Nodo* aux = cabeza;
         while (aux != nullptr) {
             if (aux->fila == f && aux->col == c) {
                 return aux->valor;
@@ -104,7 +77,7 @@ public:
     }
 
     ~MPP() {
-        Node* aux;
+        Nodo* aux;
         while (cabeza != nullptr) {
             aux = cabeza;
             cabeza = cabeza->siguiente;

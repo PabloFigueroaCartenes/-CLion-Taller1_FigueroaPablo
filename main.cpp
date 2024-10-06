@@ -6,8 +6,11 @@
 int main() {
     MPP tablero1;
     MPP tablero2;
-    string archivoEscenarios = "escenarios.txt";
+    ficha fichas;
+    string archivoEscenarios = "/home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/escenarios.txt";
+    string archivoFichas = "/home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/fichas.txt";
     tablero1.llenarTablero(archivoEscenarios, 2);
+    fichas.llenarFichas(archivoFichas);
 
     tablero2.insertar(0, 1, 7);
     tablero2.insertar(2, 3, 2);
@@ -16,11 +19,12 @@ int main() {
 
     tablero1.desplegar();
     tablero2.desplegar();
+    fichas.desplegar();
 
-    cout << parametrosXMatriz("escenarios.txt") << endl;
-    cout << parametrosYMatriz("escenarios.txt") << endl;
-    cout << parametrosXMatriz("fichas.txt") << endl;
-    cout << parametrosYMatriz("fichas.txt") << endl;
+    cout << parametrosXMatriz(archivoEscenarios) << endl;
+    cout << parametrosYMatriz(archivoEscenarios) << endl;
+    cout << parametrosXMatriz(archivoFichas) << endl;
+    cout << parametrosYMatriz(archivoFichas) << endl;
 
     return 0;
 }

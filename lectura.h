@@ -60,6 +60,8 @@ int parametrosXMatriz(string archivo) {
     file.close();
     return pos+1;
 }
+
+
 #ifndef CONTROL1_1_LECTURA_H
 #define CONTROL1_1_LECTURA_H
 

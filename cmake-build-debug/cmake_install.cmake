@@ -1,4 +1,4 @@
-# Install script for directory: /home/amnesia/CLionProjects/control1-1
+# Install script for directory: /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/amnesia/CLionProjects/control1-1/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
