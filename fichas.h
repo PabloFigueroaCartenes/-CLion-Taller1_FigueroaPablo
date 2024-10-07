@@ -1,11 +1,42 @@
 //
 // Created on 26-09-24.
 //
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <fstream>
+#include <string>
+#include <regex>
 
-#include "menu.h"
+using namespace std;
+
 
 #ifndef CONTROL1_1_FICHAS_H
 #define CONTROL1_1_FICHAS_H
+
+int tipoDeClase(string tipo) {
+    //valor 0 indica casilla bloqueada
+    if ("Espadachin" == tipo || "espadachin" == tipo) {
+        return 1;
+    } else if  ("Mago" == tipo || "mago" == tipo) {
+        return 2;
+    } else if ("Tanque" == tipo || "tanque" == tipo) {
+        return 3;
+    } else if ("Arquero" == tipo || "arquero" == tipo) {
+        return 4;
+    }
+    return -1;
+}
+
+vector<string> cortarCadena(const string& cadena, char coma) {
+    vector<string> resultado;
+    stringstream ss(cadena);
+    string aux;
+    while (getline(ss, aux, coma)) {
+        resultado.push_back(aux);
+    }
+    return resultado;
+}
 
 struct Nodo {
     int fila;
@@ -66,6 +97,17 @@ public:
             cout << aux->rango << ")" << endl;
             aux = aux->siguiente;
         }
+    }
+    Nodo* getFicha(int pos) {
+        Nodo* aux = cabeza;
+        for (int i = 0; i < pos; i++) {
+            if (aux == nullptr) {
+                cerr << "Error: fuera de limite" << endl;
+                return nullptr;
+            }
+            aux = aux->siguiente;
+        }
+        return aux;
     }
     ~ficha() {
         Nodo* aux;

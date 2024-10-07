@@ -1,1 +1,1 @@
-/bin/g++ -g CMakeFiles/control1_1.dir/main.cpp.o -o control1_1 
+/bin/g++ -g CMakeFiles/control1_1.dir/main.cpp.o -o control1_1

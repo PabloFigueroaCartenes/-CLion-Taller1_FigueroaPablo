@@ -1,9 +1,9 @@
 CMakeFiles/control1_1.dir/main.cpp.o: \
  /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/main.cpp \
  /usr/include/stdc-predef.h \
+ /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/menu.h \
  /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/tableros.h \
  /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/fichas.h \
- /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/menu.h \
  /usr/include/c++/12/iostream \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++config.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/os_defines.h \
@@ -160,10 +160,8 @@ CMakeFiles/control1_1.dir/main.cpp.o: \
  /usr/include/c++/12/bits/codecvt.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/c++io.h \
- /usr/include/c++/12/bits/fstream.tcc \
- /home/amnesia/CLionProjects/-CLion-Taller1_FigueroaPablo/lectura.h \
- /usr/include/c++/12/regex /usr/include/c++/12/bitset \
- /usr/include/c++/12/locale \
+ /usr/include/c++/12/bits/fstream.tcc /usr/include/c++/12/regex \
+ /usr/include/c++/12/bitset /usr/include/c++/12/locale \
  /usr/include/c++/12/bits/locale_facets_nonio.h /usr/include/c++/12/ctime \
  /usr/include/x86_64-linux-gnu/c++/12/bits/time_members.h \
  /usr/include/x86_64-linux-gnu/c++/12/bits/messages_members.h \

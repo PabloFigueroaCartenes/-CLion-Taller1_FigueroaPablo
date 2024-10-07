@@ -8,6 +8,7 @@ private:
     int filas, cols;
     Nodo* cabeza;
 
+
 public:
     MPP() {
         filas = 4;
@@ -43,6 +44,7 @@ public:
             aux = aux->siguiente;
         }
     }
+
     void llenarTablero(string archivo, int escenario) {
         ifstream file(archivo);
         if (!file.is_open()) {
@@ -61,11 +63,14 @@ public:
             } else if (pos == 1) {
                 vector<string> entradas = cortarCadena(linea, ',');
                 this->insertar(stoi(entradas.at(2)),stoi(entradas.at(1)), tipoDeClase(entradas.at(0)));
+            } else {
+                break;
             }
+
         }
         file.close();
     }
-    int getValue(int f, int c) {
+    int getValor(int f, int c) {
         Nodo* aux = cabeza;
         while (aux != nullptr) {
             if (aux->fila == f && aux->col == c) {
